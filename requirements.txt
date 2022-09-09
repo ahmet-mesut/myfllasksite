@@ -24,7 +24,7 @@ MarkupSafe==2.1.1
 matplotlib==3.5.3
 matplotlib-inline==0.1.6
 numpy==1.23.2
-opencv-python-headless==4.2.0.32
+opencv-python-headless
 packaging==21.3
 pandas==1.4.4
 parso==0.8.3
