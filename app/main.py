@@ -19,7 +19,7 @@ def mask_image():
 
         img = cv2.imdecode(npimg,cv2.IMREAD_COLOR)
 
-        #my_model = Licence_Plate(trained_model)
+        my_model = Licence_Plate(trained_model)
 
         img = my_model.detect(img)
         img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
