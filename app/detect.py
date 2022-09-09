@@ -2,8 +2,8 @@
 import torch
 import cv2
 
-trained_model = '/myfllasksite/app/best.pt'
-
+trained_model = 'myfllasksite/app/best.pt'
+#C:/Users/Murat/Desktop/herokuflask/myfllasksite/app/best.pt
 #my_model2 = Licence_Plate(trained_model)
 
 
