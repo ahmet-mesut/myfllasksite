@@ -30,9 +30,9 @@ class Licence_Plate:
                   font                   = cv2.FONT_HERSHEY_TRIPLEX
                   bottomLeftCornerOfText = (0,85)
                   fontScale              = 3
-                  fontColor              = (218,212,214)
+                  fontColor              = (255,0,0)
                   thickness              = 3
-                  img = cv2.putText(self.img,'Any car plate is not finded!', bottomLeftCornerOfText,font,fontScale,fontColor,thickness)
+                  img = cv2.putText(self.img,'Plate not detected!', bottomLeftCornerOfText,font,fontScale,fontColor,thickness)
 
                   return img
             else:
