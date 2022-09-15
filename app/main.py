@@ -33,6 +33,28 @@ def mask_image():
 
         return jsonify({'status':str(img_base64)})
 
+@app.route('/blurObject',methods=['POST'])
+def blur_image():
+        file = request.files['image'].read()
+        npimg= np.fromstring(file,np.uint8)
+
+        img = cv2.imdecode(npimg,cv2.IMREAD_COLOR)
+
+        my_model_blur = Licence_Platee(trained_model)
+
+        img = my_model_blur.detect(img)
+        img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+        img = Image.fromarray(img.astype("uint8"))
+        rawBytes = io.BytesIO()
+        img.save(rawBytes, "JPEG")
+
+        rawBytes.seek(0)
+
+        img_base64 = base64.b64encode(rawBytes.read())
+
+        return jsonify({'status':str(img_base64)})
+
+
 @app.route('/test' , methods=['GET','POST'])
 def test():
     print("log: got at test" , file=sys.stderr)

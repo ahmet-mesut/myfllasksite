@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>YOLO-Car Plate Detection</title>
-	<link rel="stylesheet" type="text/css" href="../static/index.css">
-	<script
-			  src="https://code.jquery.com/jquery-3.3.1.min.js"
-			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			  crossorigin="anonymous"></script>
-	<script type="text/javascript" src="../static/index.js"></script>
+  <title>YOLO-Car Plate Detection</title>
+  <link rel="stylesheet" type="text/css" href="../static/index.css">
+  <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../static/index.js"></script>
 </head>
 <body>
 
 
 
 <div class='App'>
+    <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
     <header class='App-header'>
-        <p><u>
+        <p><u class="textshadow">
           Car Plate Detection - YOLO
         </u></p>
         <div className="pre_img">
           <span><img id="imagebox" src=""></span>
         </div>
-        <form>
+        <form id="f1">
           <input id="imageinput" type="file" name="image" onchange="readUrl(this)">
         </form>
-			<button name="send" id = "sendbutton">Send</button>
-	</header>
+        <div class="wrapper">
+          <button name="send" type="button" class="button button1" id = "sendbutton">Detect</button>
+          <button name="Blur" type="button" class="button button2"  id = "blurbutton">Blur</button>
+
+        </div>
+  </header>
 </div>
 
 </body>
