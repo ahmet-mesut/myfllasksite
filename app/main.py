@@ -7,6 +7,7 @@ import numpy as np
 import cv2
 import base64
 from app.detect import *
+from app.blur import *
 
 
 app = Flask(__name__)
